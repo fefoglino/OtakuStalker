@@ -5,11 +5,9 @@ import numpy as np
 from wordcloud import WordCloud
 
 def makeWordCloud(jsonFile):
-    twitterCompleteData = jsonFile #change this when project gets approved
-
     allTheTweets = str()
 
-    tweetFile = open(twitterCompleteData, "r")
+    tweetFile = open(jsonFile, "r")
     tweetData = json.load(tweetFile)
     tweetFile.close()
 
@@ -24,4 +22,5 @@ def makeWordCloud(jsonFile):
     plt.axis("off")
 
     plt.savefig("otakustalker_img")
+    # add a return for the plot image-- image link? something?
     plt.show()
