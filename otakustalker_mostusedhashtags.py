@@ -1,24 +1,29 @@
 import json
 from collections import Counter
 
+
 jsonFile = "tweets_small.json"
-hashtagList = []
 
-tweetFile = open(jsonFile, "r")
-tweetData = json.load(tweetFile)
-tweetFile.close()
+def mostCommonHashtags(jsonFile):
+    hashtagList = []
+    mostUsedHashtagsList = []
 
-emptyList=[]
+    tweetFile = open(jsonFile, "r")
+    tweetData = json.load(tweetFile)
+    tweetFile.close()
 
-for i in range(len(tweetData)):
-    if (tweetData[i]["hashtags"])==emptyList:
-        continue
-    else:
-        for j in range(len(tweetData[i]["hashtags"])):
-            hashtagList.append(tweetData[i]["hashtags"][j]["text"])
+    emptyList=[]
 
-mostUsedHashtags=dict((i, hashtagList.count(i)) for i in hashtagList)
-print(mostUsedHashtags)
+    for i in range(len(tweetData)):
+        if (tweetData[i]["hashtags"])==emptyList:
+            continue
+        else:
+            for j in range(len(tweetData[i]["hashtags"])):
+                hashtagList.append(tweetData[i]["hashtags"][j]["text"])
 
-for i in range(mostUsedHashtags):
-    value=
+    mostUsedHashtags=Counter(hashtagList).most_common(5)
+
+    for i in range(5):
+        mostUsedHashtagsList.append(mostUsedHashtags[i][0])
+    print(mostUsedHashtagsList)
+    return mostUsedHashtagsList
