@@ -1,6 +1,6 @@
 import otakustalker_wordfreq as wf
 import otakustalker_problematicanalysis as pa
-import fixingHashtagCounter as hc
+import otakustalker_mostusedhashtags as hc
 import otakustalker_numberoftweets as nt
 
 pa.probFactor("tweets_small.json")
