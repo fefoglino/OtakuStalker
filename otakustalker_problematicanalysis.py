@@ -22,7 +22,6 @@ def probFactor(jsonFile):
             probCounter+=1
 
     probFactor = int(probCounter)/int(len(allTheTweets))
-    print(probFactor)
     return(probFactor)
 
     words.close()
