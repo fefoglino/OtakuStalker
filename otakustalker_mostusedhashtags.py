@@ -25,5 +25,5 @@ def mostCommonHashtags(jsonFile):
 
     for i in range(5):
         mostUsedHashtagsList.append(mostUsedHashtags[i][0])
-    print(mostUsedHashtagsList)
+        
     return mostUsedHashtagsList
