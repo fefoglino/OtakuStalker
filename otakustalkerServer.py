@@ -1,6 +1,7 @@
 #!flask/bin/python
-from flask import Flask, jsonify, abort
+from flask import Flask, jsonify, abort, send_file
 import otakustalkerUsernameAnalysis as osua
+import otakustalker_wordfreq as wf
 
 app = Flask(__name__)
 
@@ -26,6 +27,11 @@ app = Flask(__name__)
 @app.route('/screenname/api/v1.0/analysis/<user>', methods=["GET"])
 def analyzeUser(user):
     return jsonify(osua.usernameAnalysis(user))
+
+@app.route('/screenname/api/v1.0/analysis/<user>/wordcloud', methods=["GET"])
+def wordCloud(user):
+    wf.makeWordCloud(user)
+    return send_file("otakustalker_img.png", mimetype = "image/png")
 
 if __name__ == '__main__':
     app.run(debug=True)
