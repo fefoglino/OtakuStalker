@@ -1,16 +1,15 @@
 import json
 from datetime import *
 
-jsonFiles = "tweets_small.json"
 datetimeList = []
 datetimeDifferenceList = []
 averagelist = []
 
-def tweetFrequency(jsonFile):
+def tweetFrequency(tweetData):
     datetimeList = []
-    tweetFile = open(jsonFile, "r")
-    tweetData = json.load(tweetFile)
-    tweetFile.close()
+    # tweetFile = open(jsonFile, "r")
+    # tweetData = json.load(tweetFile)
+    # tweetFile.close()
 
     datetimeLists = []
     for i in range(len(tweetData)):
