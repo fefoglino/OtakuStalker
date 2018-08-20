@@ -1,3 +1,4 @@
+# theuser=input("Enter a Twitter screenname/handle to analyze ")
 def usernameAnalysis(user):
     # import otakustalker_wordfreq as wf
     import otakustalker_problematicanalysis as pa
@@ -12,7 +13,7 @@ def usernameAnalysis(user):
     access_token="1029393576470474752-MsGXlLMDYdHSqPtRg0HjCgMYYEpKj7"
     access_token_secret="CAjh4EWSPIil4zGF0tKNisSSmbZVCIbwOWqBnsirK3TDY"
 
-    # user=input("Enter a Twitter screenname/handle to analyze ")
+
     userFound = False
 
     with open("tweets.json") as tweets:
@@ -68,3 +69,4 @@ def usernameAnalysis(user):
     )
 
     # wf.makeWordCloud(tweetsToProcess)
+# usernameAnalysis(theuser)
