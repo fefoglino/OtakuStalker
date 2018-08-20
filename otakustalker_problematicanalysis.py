@@ -3,9 +3,9 @@ import json
 def probFactor(jsonFile):
     allTheTweets = str()
 
-    tweetFile = open(jsonFile, "r")
-    tweetData = json.load(tweetFile)
-    tweetFile.close()
+#     tweetFile = open(jsonFile, "r")
+#     tweetData = json.load(tweetFile)
+#     tweetFile.close()
 
     words = open("bad-words.txt", "r")
     wordsList = words.read()
