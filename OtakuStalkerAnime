@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="OtakuStalker.css">
+    <link href="https://fonts.googleapis.com/css?family=Kirang+Haerang" rel="stylesheet">
+
+<h1> Otaku <span style="color:red"></span>Stalker</h1>
+<nav>
+    <i class ="fa fa-bars menu" aria-hidden="true"></i>
+
+<div id="over"><img id="main"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbyS90IqI0wgoF5EJ-wMFU3q82H0Rgw6l82-oqCybjfVh9VagACQ"></div>
+  </head>
+  <body>
+
+<nav>
+  <ul>
+    <button type="button" onclick="document.Search Url">Search Url </button>
+    <button type="button" onclick="document.Search #">Search # </button>
+    <button type="button" onclick="document.About">About </button>
+    <button type="button" onclick="document.Anime">Anime </button>
+  </ul>
+
+</nav>
+<div id="sad">
+</div>
+
+<div><img id="cool" src="https://i.pinimg.com/originals/b8/81/44/b88144c8b86ae377f61a982b0457be10.jpg"></div>
+
+<!-- <form action = "comments.php" method ="get">
+  Comment: <input type = "text" name = "name"><br>
+  <input type = "submit">
+    Comment: <?php echo $_GET["name"]; ?> <br>
+</form> -->
+
+<div id="commentsArea"name=""></div>
+<div><img id="umm" src="https://scontent-lax3-2.cdninstagram.com/vp/8b15e2544a75b3fd275b161e95aec9fb/5C068AFD/t51.2885-15/e35/c0.55.446.446/38685956_288129821782972_6152071370508337152_n.jpg"></div>
+
+<div><img id="Yes" src="https://lh3.googleusercontent.com/8yLMXP2HyRiffkngfVPvMZByVbWjXL3QCvsDw9HrsFMf9BQeNgZjihNk4B1AogyB8Dtypw=s127"></div>
+
+
+
+
+<!--
+ <form action="/action_page.php" id="usrform"> -->
+  <!-- <p style="color:Red;">Comment: <input type="text">
+  <input id=commentText type="submit"> -->
+<!-- </form> -->
+<!-- <br> --> -->
+<!-- <textarea rows="4" cols="50" id="comment" form="usrform">
+Enter text here...</textarea> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="color:White;"> &copy;Copyright by SATAN <p>
+  </body>
+</html>
