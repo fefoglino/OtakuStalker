@@ -8,9 +8,9 @@ averagelist = []
 
 def tweetFrequency(jsonFile):
     datetimeList = []
-    tweetFile = open(jsonFile, "r")
-    tweetData = json.load(tweetFile)
-    tweetFile.close()
+#     tweetFile = open(jsonFile, "r")
+#     tweetData = json.load(tweetFile)
+#     tweetFile.close()
 
     datetimeLists = []
     for i in range(len(tweetData)):
