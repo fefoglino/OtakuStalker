@@ -3,6 +3,7 @@ def usernameAnalysis(user):
     import otakustalker_problematicanalysis as pa
     import otakustalker_mostusedhashtags as hc
     import otakustalker_tweetfrequency as tf
+    import otakustalker_totalretweets as tr
     import json
     import tweepy
 
@@ -61,6 +62,8 @@ def usernameAnalysis(user):
     "mostCommonHashtags":hc.mostCommonHashtags(tweetsToProcess),
 
     "tweetFrequency": tf.tweetFrequency(tweetsToProcess),
+
+    "totalRetweets": tr.retweets(tweetsToProcess)
     }]
     )
 
