@@ -150,11 +150,26 @@ textarea{
   position: absolute;
   top: 120%;
   left: 40%;
-  height: 300px;
+  height: 200px;
 }
-#Yes{
+#comment{
   position: absolute;
-  top: 182%;
-  left: 27%;
-  height: 300px;
+  top: 190%;
+  left: 32%;
+  height: 100px;
+  width: 400px;
+}
+#submit{
+  position: absolute;
+  top: 210%;
+  left: 40%;
+}
+#reset{
+  position: absolute;
+  top: 210%;
+  left: 50%;
+}
+#copy{
+  position: absolute;
+  top: 500%;
 }
