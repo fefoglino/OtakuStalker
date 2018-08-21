@@ -2,7 +2,7 @@ import json
 
 def probFactor(tweetData):
     allTheTweets = str()
-    # 
+    #
     # tweetFile = open(jsonFile, "r")
     # tweetData = json.load(tweetFile)
     # tweetFile.close()
