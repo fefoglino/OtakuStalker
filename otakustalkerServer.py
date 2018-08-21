@@ -5,8 +5,8 @@ import otakustalker_wordfreq as wf
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
 
+CORS(app)
 # tasks = [
 #     {
 #         'id': 1,
