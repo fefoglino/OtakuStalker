@@ -1,6 +1,6 @@
-var gay=$("input").val;
-var request="http://localhost:5000/screenname/api/v1.0/analysis/"+gay;
-var img_add="http://localhost:5000/screenname/api/v1.0/analysis/"+gay+ "wordcloud";
+// var gay=$("input").val;
+// var request="http://localhost:5000/screenname/api/v1.0/analysis/"+gay;
+// // var img_add="http://localhost:5000/screenname/api/v1.0/analysis/"+gay+ "wordcloud";
 function wlw(){
   fetch(request)
     .then(function(response) {
@@ -11,11 +11,14 @@ function wlw(){
       var pf=myJson[0]["problematicFactor"];
       var retweet=myJson[0]["totalRetweets"];
       var frequency=myJson[0]["tweetFrequency"];
+      var words=myJson[0]["mostUsedWords"];
       document.getElementById('hashtags').innerHTML="Most Used Hashtags: "+mch;
-      document.getElementById('problematic').innerHTML="Problematic Factor from 0-1: "+pf;
+      document.getElementById('problematic').innerHTML="Problematic Factor from 1-10: "+pf;
       document.getElementById('rate').innerHTML="Average Number of Hours Between Tweets: "+frequency;
       document.getElementById('retweets').innerHTML="Total Number of Retweets: "+retweet;
-      document.getElementById("in").style.margin.bottom="0px";
+      document.getElementById('words').innerHTML="Most Commonly Used Words: "+words;
+
+      // document.getElementById("in").style.margin.bottom="0px";
       console.log(myJson);
 
     });
@@ -34,7 +37,13 @@ function wlw(){
   //         }
   //     });
   // }
+
+
+
   function daddio(){
+    gay = document.getElementById("twitter_handle").value;
+    request="http://localhost:5000/screenname/api/v1.0/analysis/"+gay;
+    // img_add="http://localhost:5000/screenname/api/v1.0/analysis/"+gay+ "wordcloud";
     wlw();
     // fetchim(img_add);
   }
