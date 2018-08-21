@@ -5,8 +5,10 @@ def usernameAnalysis(user):
     import otakustalker_mostusedhashtags as hc
     import otakustalker_tweetfrequency as tf
     import otakustalker_totalretweets as tr
+    import otakustalker_mostusedwords as wc
     import json
     import tweepy
+    import os
 
     consumer_key="T3JHWaXPfk3HUeSDt7D8RxXfH"
     consumer_secret="ey2pHMJuq2kwdTbxYdMhAatohc3qYADBa91ep1zaL10a5L3Y6J"
@@ -16,8 +18,11 @@ def usernameAnalysis(user):
 
     userFound = False
 
-    with open("tweets.json") as tweets:
-        existingTweets = json.load(tweets)
+    if os.path.isfile("tweets.json"):
+        with open("tweets.json") as tweets:
+            existingTweets = json.load(tweets)
+    else:
+        existingTweets=[]
 
     for i in range(len(existingTweets)):
         if existingTweets[i]["screenname"] == user:
@@ -64,7 +69,9 @@ def usernameAnalysis(user):
 
     "tweetFrequency": tf.tweetFrequency(tweetsToProcess),
 
-    "totalRetweets": tr.retweets(tweetsToProcess)
+    "totalRetweets": tr.retweets(tweetsToProcess),
+
+    "mostUsedWords": wc.mostCommonWords(user)
     }]
     )
 
