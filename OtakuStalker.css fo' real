@@ -90,7 +90,7 @@ img{
   bottom: 30px;
 }
 
-button{
+.navbar{
   position:relative;
   top: 33px;
   font-family: 'Kirang Haerang', cursive;
