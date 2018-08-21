@@ -21,6 +21,6 @@ def probFactor(tweetData):
         if allTheTweets[i] in wordsList:
             probCounter+=1
 
-    probFactor = int(probCounter)/int(len(allTheTweets))
+    probFactor = (int(probCounter)/int(len(allTheTweets)))*10
     return(probFactor)
     words.close()
