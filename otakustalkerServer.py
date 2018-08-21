@@ -2,8 +2,10 @@
 from flask import Flask, jsonify, abort, send_file
 import otakustalkerUsernameAnalysis as osua
 import otakustalker_wordfreq as wf
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # tasks = [
 #     {
