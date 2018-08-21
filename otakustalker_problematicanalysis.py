@@ -1,11 +1,11 @@
 import json
 
-def probFactor(jsonFile):
+def probFactor(tweetData):
     allTheTweets = str()
-
-#     tweetFile = open(jsonFile, "r")
-#     tweetData = json.load(tweetFile)
-#     tweetFile.close()
+    # 
+    # tweetFile = open(jsonFile, "r")
+    # tweetData = json.load(tweetFile)
+    # tweetFile.close()
 
     words = open("bad-words.txt", "r")
     wordsList = words.read()
@@ -23,5 +23,4 @@ def probFactor(jsonFile):
 
     probFactor = int(probCounter)/int(len(allTheTweets))
     return(probFactor)
-
     words.close()
