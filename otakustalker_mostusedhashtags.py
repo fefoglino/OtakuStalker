@@ -23,7 +23,7 @@ def mostCommonHashtags(tweetData):
     mostUsedHashtags=Counter(hashtagList).most_common(5)
 
     if len(mostUsedHashtags)<5:
-        return("Not enough hashtags to analyze")
+        return(0)
     else:
         for i in range(5):
             mostUsedHashtagsList.append(mostUsedHashtags[i][0])
