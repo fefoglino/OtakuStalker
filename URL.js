@@ -7,20 +7,33 @@ function wlw(){
       return response.json();
     })
     .then(function(myJson) {
-      var mch=myJson[0]["mostC                                                                                                                                   ommonHashtags"];
+      // var mch=myJson[0]["mostCommonHashtags"];
       var pf=myJson[0]["problematicFactor"];
       var retweet=myJson[0]["totalRetweets"];
       var frequency=myJson[0]["tweetFrequency"];
       if (myJson[0]["mostUsedWords"]===0){
         var words = "Not enough words to analyze";
-        document.getElementById('words').innerHTML="Most Commonly Used Words: "+words;
+        document.getElementById('wordscaption').innerHTML="Most Commonly Used Words: "+words;
       } else {
-        document.getElementById('wordscaption').innerHTML="Most Commonly Used Words: "
+        document.getElementById('wordscaption').innerHTML="Most Commonly Used Words: ";
+        var htmlCode = " ";
         for (i=0; i<50; i++) {
-          var htmlCode += "<li>"+myJson[0]["mostUsedWords"][i]+"</li>"
+          htmlCode += "<li>"+myJson[0]["mostUsedWords"][i]+"</li>";
         }
+        document.getElementById("words").innerHTML=htmlCode
       }
-      document.getElementById('hashtags').innerHTML="Most Used Hashtags: "+mch;
+      if (myJson[0]["mostCommonHashtags"]===0){
+        var insertext = "Not enough hashtags to analyze";
+        document.getElementById('hashtagscaption').innerHTML="Most Commonly Used Hashtags: "+insertext;
+      } else {
+        document.getElementById('hashtagscaption').innerHTML="Most Commonly Used Hashtags: ";
+        var hashtagsCode = " ";
+        for (i=0; i<5; i++) {
+          hashtagsCode += "<li>"+myJson[0]["mostCommonHashtags"][i]+"</li>";
+        }
+        document.getElementById("hashtags").innerHTML=hashtagsCode
+      }
+      // document.getElementById('hashtags').innerHTML="Most Used Hashtags: "+mch;
       document.getElementById('problematic').innerHTML="Problematic Factor from 1-10: "+pf;
       document.getElementById('rate').innerHTML="Average Number of Hours Between Tweets: "+frequency;
       document.getElementById('retweets').innerHTML="Total Number of Retweets: "+retweet;
