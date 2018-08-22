@@ -7,16 +7,24 @@ function wlw(){
       return response.json();
     })
     .then(function(myJson) {
-      var mch=myJson[0]["mostCommonHashtags"];
+      var mch=myJson[0]["mostC                                                                                                                                   ommonHashtags"];
       var pf=myJson[0]["problematicFactor"];
       var retweet=myJson[0]["totalRetweets"];
       var frequency=myJson[0]["tweetFrequency"];
-      var words=myJson[0]["mostUsedWords"];
+      if (myJson[0]["mostUsedWords"]===0){
+        var words = "Not enough words to analyze";
+        document.getElementById('words').innerHTML="Most Commonly Used Words: "+words;
+      } else {
+        document.getElementById('wordscaption').innerHTML="Most Commonly Used Words: "
+        for (i=0; i<50; i++) {
+          var htmlCode += "<li>"+myJson[0]["mostUsedWords"][i]+"</li>"
+        }
+      }
       document.getElementById('hashtags').innerHTML="Most Used Hashtags: "+mch;
       document.getElementById('problematic').innerHTML="Problematic Factor from 1-10: "+pf;
       document.getElementById('rate').innerHTML="Average Number of Hours Between Tweets: "+frequency;
       document.getElementById('retweets').innerHTML="Total Number of Retweets: "+retweet;
-      document.getElementById('words').innerHTML="Most Commonly Used Words: "+words;
+
 
       // document.getElementById("in").style.margin.bottom="0px";
       console.log(myJson);
