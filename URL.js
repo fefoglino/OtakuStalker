@@ -14,6 +14,7 @@ function wlw(){
       if (myJson[0]["mostUsedWords"]===0){
         var words = "Not enough words to analyze";
         document.getElementById('wordscaption').innerHTML="Most Commonly Used Words: "+words;
+        document.getElementById('words').innerHTML = " ";
       } else {
         document.getElementById('wordscaption').innerHTML="Most Commonly Used Words: ";
         var htmlCode = " ";
@@ -25,6 +26,7 @@ function wlw(){
       if (myJson[0]["mostCommonHashtags"]===0){
         var insertext = "Not enough hashtags to analyze";
         document.getElementById('hashtagscaption').innerHTML="Most Commonly Used Hashtags: "+insertext;
+        document.getElementById('hashtags').innerHTML=" ";
       } else {
         document.getElementById('hashtagscaption').innerHTML="Most Commonly Used Hashtags: ";
         var hashtagsCode = " ";
